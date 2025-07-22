@@ -1,0 +1,512 @@
+/* Completed CSS for ChangeAddressModal component - RESPONSIVE DONE */
+
+.addressModalOverlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+
+.addressModalContent {
+  background: linear-gradient(135deg, #f8f3e9 0%, #fff 100%);
+  width: 420px;
+  padding: 32px 28px 24px 28px;
+  border-radius: 18px;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(6, 101, 78, 0.13), 0 2px 12px rgba(0,0,0,0.10);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: box-shadow 0.3s cubic-bezier(0.4,0,0.2,1), transform 0.2s;
+  animation: scaleIn 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+@keyframes scaleIn {
+  0% { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.addressModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.addressModalTitle {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: sans-serif;
+  margin: 0;
+  color: #044236;
+  /* letter-spacing: 1px; */
+}
+
+.addressModalClose {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #ff4d4f;
+  transition: color 0.2s, transform 0.2s;
+}
+.addressModalClose:hover {
+  color: #e6393b;
+  transform: scale(1.15);
+}
+
+/* Pincode Section */
+.pincodeSection {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.pincodeInput {
+  flex: 1;
+  padding: 10px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+.pincodeInput:focus {
+  border-color: #044236;
+  outline: none;
+}
+
+.checkButton {
+  background: #044236;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(6, 101, 78, 0.08);
+}
+.checkButton:hover {
+  background: linear-gradient(135deg, #06654e 0%, #088c6a 100%);
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(6, 101, 78, 0.13);
+}
+
+.pincodeOptions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.pincodeOption {
+  border: 1px solid #FF3F6C;
+  background: none;
+  color: #FF3F6C;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Address List */
+.addressList {
+  max-height: 220px;
+  overflow-y: auto;
+  margin-bottom: 22px;
+}
+
+.noAddress {
+  font-size: 15px;
+  color: #666;
+  text-align: center;
+  font-family: inherit;
+}
+
+.addressItem {
+  display: flex;
+  align-items: flex-start;
+  border: 1.5px solid #f0f0f0;
+  border-radius: 10px;
+  padding: 14px 12px;
+  margin-bottom: 12px;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.3s, border-color 0.3s, transform 0.2s;
+}
+.addressItem:hover {
+  box-shadow: 0 8px 24px rgba(6, 101, 78, 0.10);
+  border-color: #044236;
+  transform: scale(1.01);
+}
+
+.addressRadio {
+  margin-right: 12px;
+  margin-top: 3px;
+}
+
+.addressDetails {
+  flex: 1;
+}
+
+.addressName {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #222;
+  font-family: inherit;
+}
+
+.defaultTag {
+  font-size: 13px;
+  color: #666;
+  font-family: inherit;
+}
+
+.addressText,
+.addressPhone {
+  font-size: 13px;
+  color: #666;
+  margin: 2px 0;
+  font-family: inherit;
+}
+
+.addressActions {
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  color: #044236;
+  padding: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, transform 0.2s;
+}
+.iconButton:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+.iconButton:hover:not(:disabled) {
+  color: #088c6a;
+  transform: scale(1.15);
+}
+
+/* Remove background from old edit/delete buttons if present */
+.editButton, .deleteButton {
+  background: none !important;
+  border: none !important;
+  color: inherit;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* Add New Address Button */
+.addNewAddressButton {
+  display: flex;
+  align-items: center;
+  background-color: #044236;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 22px;
+  transition: color 0.2s, transform 0.2s;
+  font-family: sans-serif;
+  min-height: 36px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+.addNewAddressButton:hover {
+  color: #fff;
+  background: linear-gradient(135deg, #06654e 0%, #088c6a 100%);
+  transform: scale(1.07);
+}
+
+/* Add Address Form */
+.addAddressForm {
+  margin-bottom: 20px;
+}
+
+.addAddressTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #044236;
+  font-family: inherit;
+}
+
+.addressInput {
+  width: 90%;
+  padding: 10px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  margin-bottom: 12px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+.addressInput:focus {
+  border-color: #044236;
+  outline: none;
+}
+
+/* Modal Actions */
+.addressModalActions {
+  display: flex;
+  gap: 30px;
+}
+
+.saveButton {
+  background: #044236;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(6, 101, 78, 0.08);
+  font-family: inherit;
+}
+.saveButton:hover:not(:disabled) {
+  background: linear-gradient(135deg, #06654e 0%, #088c6a 100%);
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(6, 101, 78, 0.13);
+}
+.saveButton:disabled {
+  background: #ccc;
+  color: #fff;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.cancelButton {
+  background: #f0f0f0;
+  color: #044236;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  font-family: inherit;
+}
+.cancelButton:hover {
+  background: linear-gradient(135deg, #eaf9f4 0%, #c6f7e2 100%);
+  color: #088c6a;
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(6, 101, 78, 0.10);
+}
+
+@media (max-width: 768px) {
+  .addressModalContent {
+    width: 95vw;
+    max-width: 95vw;
+    padding: 24px 20px;
+    border-radius: 16px;
+    margin: 16px;
+  }
+
+  .addressModalTitle {
+    font-size: 16px;
+  }
+
+  .addAddressTitle {
+    font-size: 15px;
+  }
+
+  .addressInput, .pincodeInput {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .saveButton, .cancelButton {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  
+  .pincodeSection {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .checkButton {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  .addressList {
+    max-height: 50vh;
+  }
+  
+  .addressItem {
+    padding: 12px 10px;
+    margin-bottom: 10px;
+  }
+  
+  .addressActions {
+    position: static;
+    margin-top: 8px;
+    justify-content: flex-end;
+  }
+  
+  .addNewAddressButton {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .addressModalContent {
+    width: 98vw;
+    padding: 20px 16px;
+    border-radius: 12px;
+    margin: 8px;
+  }
+
+  .addressModalTitle {
+    font-size: 15px;
+  }
+
+  .addAddressTitle {
+    font-size: 14px;
+  }
+
+  .addressInput, .pincodeInput {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .saveButton, .cancelButton {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+  
+  .pincodeSection {
+    gap: 10px;
+  }
+  
+  .checkButton {
+    padding: 10px;
+    font-size: 13px;
+  }
+  
+  .addressList {
+    max-height: 55vh;
+  }
+  
+  .addressItem {
+    padding: 10px 8px;
+    margin-bottom: 8px;
+  }
+  
+  .addressName {
+    font-size: 14px;
+  }
+  
+  .addressText, .addressPhone {
+    font-size: 12px;
+  }
+  
+  .addNewAddressButton {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+  
+  .iconButton {
+    font-size: 16px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .addressModalContent {
+    width: 100vw;
+    padding: 16px 12px;
+    border-radius: 10px;
+    margin: 0;
+  }
+  
+  .addressModalHeader {
+    margin-bottom: 20px;
+  }
+  
+  .addressModalTitle {
+    font-size: 14px;
+  }
+  
+  .addressModalClose {
+    font-size: 18px;
+    padding: 4px;
+  }
+  
+  .addAddressTitle {
+    font-size: 13px;
+  }
+  
+  .addressInput, .pincodeInput {
+    font-size: 12px;
+    padding: 8px;
+  }
+  
+  .saveButton, .cancelButton {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .checkButton {
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  .addressList {
+    max-height: 60vh;
+  }
+  
+  .addressItem {
+    padding: 8px 6px;
+    margin-bottom: 6px;
+  }
+  
+  .addressName {
+    font-size: 13px;
+  }
+  
+  .addressText, .addressPhone {
+    font-size: 11px;
+  }
+  
+  .addNewAddressButton {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .iconButton {
+    font-size: 14px;
+    padding: 4px;
+  }
+}

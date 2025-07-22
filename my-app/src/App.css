@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #051d3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.App {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.addbtn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  background-color: #34b138;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.addbtn:hover{
+  background: rgba(40, 128, 5, 0.877);
+}
+
+
+
+/* Task List Styling */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+li:hover {
+  background-color: #f1f1f1;
+  transform: translateY(-2px);
+}
+
+/* Task Title */
+h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Task Description */
+p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.btnrm{
+  width: 100%;
+  background-color: #fc5c59;
+  padding: 14px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnrm:hover{
+  background: #da0707;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#3498db" />
+    <meta name="description" content="A simple task manager PWA that works offline" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>Task Manager PWA</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script type="module" src="/src/main.jsx"></script>
+    <!-- This is the fallback content for browsers that don't support JavaScript -->
+    <div id="offline-message" style="display: none;">
+      <h2>You are currently offline</h2>
+      <p>This is a Progressive Web App that requires JavaScript to function properly.</p>
+    </div>
+    <script>
+      // Show offline message if the user is offline and the page is not loaded from cache
+      if (!navigator.onLine && !window.applicationCache) {
+        document.getElementById('offline-message').style.display = 'block';
+      }
+    </script>
+  </body>
+</html>

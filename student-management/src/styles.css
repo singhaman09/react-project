@@ -1,0 +1,418 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+/* for dark body */
+body.dark {
+  background-color: #000000;
+  color: #f5f5f5;
+}
+/* for dark nav  */
+body.dark nav {
+  background-color: #1e1e1e;
+  padding: 10px;
+}
+body.dark a {
+  color: #f5f5f5;
+}
+/* for whole container */
+body.dark .container {
+  background-color: #121212 !important;
+}
+body.dark .theme-toggle {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+body.dark .theme-toggle:hover {
+  background-color: #555;
+}
+body.dark form {
+  padding: 35px;
+  border-radius: 8px;
+  background-color: #222 !important;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark mode styles for inputs and select */
+body.dark input,
+body.dark select,
+body.dark textarea {
+  background-color: #333 !important;
+  color: white !important;
+  border: 1px solid #555 !important;
+}
+
+/* Dark mode placeholder text */
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #bbb;
+}
+
+/* Dark mode focus effect */
+body.dark input:focus,
+body.dark select:focus,
+body.dark textarea:focus {
+  border-color: #007bff !important;
+  box-shadow: 0px 0px 6px rgba(0, 123, 255, 0.5);
+}
+
+/* Dark mode for error messages */
+body.dark .error-text {
+  color: #ff4d4d;
+}
+
+body.dark  tr:hover td{
+  background: #131212;
+}
+
+.theme-toggle {
+  top: 0px;         
+  right: 0px;      
+  z-index: 1000;     
+  padding: 4px 2px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;}
+/* Container */
+.container {
+  height: 100vh;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: #007bff;
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+nav a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  transition: 0.3s ease-in-out;
+  border-radius: 5px;
+}
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+/* Form */
+form {
+  background: white;
+  padding: 35px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin-left: 650px;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+/* Form Header */
+form h2 {
+  color: #007bff;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+/* Labels */
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+/* Inputs */
+input, select {
+  width: 100%;
+  padding: 9px;
+  width: 380px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+}
+input:focus, select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0px 0px 6px rgba(0, 123, 255, 0.5);
+}
+/* for gender handling */
+.gender-group {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.gender-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.gender-group input[type="radio"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+/* Error Messages */
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.edit{
+  margin-right: 6px;
+}
+/* Submit Button */
+button[type="submit"] {
+  background: #007bff;
+  width: 103%;
+  padding: 12px;
+  font-size: 16px;
+  transition: 0.3s;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+button[type="submit"]:hover {
+  background: #0056b3;
+  transform: scale(1.02);
+}
+
+.close-btn {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  /* background: none; */
+  font-size: 12px;
+  cursor: pointer;
+  color: red;
+}
+.close-btn:hover {
+  color: rgb(228, 11, 11);
+}
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white; 
+  color: black;
+}
+thead {
+  background-color: #007bff;
+  color: white;
+}
+tr {
+  border-bottom: 1px solid #ddd;
+}
+td, th {
+  padding: 10px;
+  text-align: left;
+}
+/* Dark mode table  */
+body.dark table {
+  background-color: #222;
+  color: white;
+}
+body.dark thead {
+  background-color: #444;
+}
+body.dark tr {
+  border-bottom: 1px solid #555;
+}
+tr:hover td {
+  background: #f1f1f1;
+}
+
+/* Buttons */
+button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+}
+.edit {
+  background: #28a745;
+}
+.edit:hover {
+  background: #218838;
+}
+.delete {
+  background: #dc3545;
+}
+.delete:hover {
+  background: #c82333;
+}
+
+/* Popup Background */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+/* Popup Content */
+
+body.dark .popup-content{
+  background: #000;
+  color: white;
+}
+.popup-content {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 350px;
+  width: 90%;
+}
+/* Popup Buttons */
+.popup-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.cancel {
+  background: #6c757d;
+  padding: 10px 18px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.cancel:hover {
+  background: #5a6268;
+}
+.confirm-delete {
+  background: #dc3545;
+  padding: 10px 18px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.confirm-delete:hover {
+  background: #c82333;
+}
+.button-group{
+display: flex;
+  gap: 10px; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 12px;
+  }
+
+  input, select {
+    font-size: 14px;
+  }
+}
+
+/* Student List Container */
+.success-message {
+  background: #28a745;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  position: relative;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.success-message.hide {
+  opacity: 0;
+}
+
+/* Add Student Button */
+.add-student-btn {
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+.add-student-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Success Message */
+.success-message {
+  background: green;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

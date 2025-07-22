@@ -1,0 +1,94 @@
+{
+    "name": "Task Manager PWA",
+    "short_name": "TaskPWA",
+    "description": "A simple task manager that works offline",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#3498db",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "/icons/icon-72x72.png",
+        "sizes": "72x72",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/icons/icon-96x96.png",
+        "sizes": "96x96",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/icons/icon-128x128.png",
+        "sizes": "128x128",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/icons/icon-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/icons/icon-152x152.png",
+        "sizes": "152x152",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/icons/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/icons/icon-384x384.png",
+        "sizes": "384x384",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/icons/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/icons/maskable-icon.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/screen1.png",
+        "sizes": "320x640",
+        "type": "image/png"
+      },
+      {
+        "src": "/screenshots/screen2.png",
+        "sizes": "320x640",
+        "type": "image/png"
+      }
+    ],
+    "shortcuts": [
+      {
+        "name": "Add Task",
+        "short_name": "Add",
+        "description": "Add a new task",
+        "url": "/?action=add",
+        "icons": [
+          {
+            "src": "/icons/add-task.png",
+            "sizes": "96x96"
+          }
+        ]
+      }
+    ],
+    "categories": ["productivity", "utilities"],
+    "prefer_related_applications": false
+  }

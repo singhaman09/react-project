@@ -1,0 +1,134 @@
+.orderTrackingCard {
+  background: white;
+  border: 1px solid #eaeaec;
+  border-left: 4px solid #197c65;
+  border-radius: 8px;
+  padding: 20px;
+  font-family: 'Work Sans';
+}
+
+.orderTrackingCard h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 10px;
+}
+
+.timelineItem {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+
+.timelineItem::before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 20px;
+  width: 2px;
+  height: calc(100% - 20px);
+  background-color: #ccc;
+  z-index: 0;
+}
+
+.timelineItem:last-child::before {
+  height: 0;
+}
+
+.statusCircle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  color: transparent;
+  z-index: 1;
+}
+
+.timelineItem.active .statusCircle {
+  border-color: #197c65;
+  background-color: #197c65;
+  color: white;
+}
+
+.statusText {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.timelineItem.active .statusText {
+  color: #197c65;
+}
+
+.date {
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
+}
+
+.cancelledMessage {
+  font-size: 16px;
+  color: #d32f2f;
+  font-weight: 600;
+  text-align: left;
+  padding: 8px 0;
+}
+.timelineItem.cancelled .statusCircle {
+  background-color: #e53935;
+  border-color: #e53935;
+  color: white;
+}
+
+.timelineItem.cancelled .statusText {
+  color: #e53935;
+}
+
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+}
+
+.returnExchangeBtn {
+  border: 1px solid #044236;
+  background: white;
+  color: #044236;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.returnExchangeBtn:hover {
+  background: #f0f0f0;
+}
+
+.helpBtn {
+  background: #044236;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.helpBtn:hover {
+  opacity: 0.95;
+}

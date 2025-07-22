@@ -1,0 +1,36 @@
+{
+    "id": "com.mycompany.app.appname",
+    "title": "AppName",
+    "main": "index.html",
+    "icon": "icon.svg",
+    "largeIcon": "icon.svg",
+    "type": "web",
+    "vendor": "My Company",
+    "version": "1.0.0",
+    "appDescription": "This's an app tagline",
+    "resolution": "1920x1080",
+    "bgColor": "red",
+    "iconColor": "red",
+    "closeOnRotation": false,
+    "disableBackHistoryAPI": false,
+    "handlesRelaunch": false,
+    "splashColor": "#111111",
+    "splashFitModeOnPortrait": "width",
+    "requiredMemory": 20,
+    "supportPortraitMode": true,
+    "supportTouchMode": "virtual",
+    "transparent": false,
+    "virtualTouch": {
+        "verticalThreshold": 20,
+        "horizontalThreshold": 50,
+        "positionEventOnPress": true,
+        "shortTouchThreshold": 30
+    },
+    "accessibility": {
+      "supportsAudioGuidance": true
+    },
+    "screenSaverProperties": {
+      "preferredType": 3
+    },
+    "useGalleryMode": true
+}

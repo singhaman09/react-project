@@ -3,12 +3,7 @@ import { getMessaging, getToken, onMessage } from 'firebase/messaging';
 
 // Replace with your Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAmZks-zKWMzSUlPRDU6SjelKBmx8L_ekM",
-    authDomain: "pwa-task-1546d.firebaseapp.com",
-    projectId: "pwa-task-1546d",
-    storageBucket: "pwa-task-1546d.firebasestorage.app",
-    messagingSenderId: "957379513803",
-    appId: "1:957379513803:web:a9b39e976b24f65fc43a4e"
+    
   };
 
 // Initialize Firebase
